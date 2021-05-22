@@ -1,0 +1,15 @@
+.low {
+    background: green;
+}
+.moderate {
+    background: yellow;
+}
+.high {
+    background: orange;
+}
+.very-high {
+    background: red;
+}
+.extreme {
+    background: purple;
+}
