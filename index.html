@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- header: (weather dashboard) -->
-    <header>Weather Dashboard</header>
-    <!-- first column on the left -->
-    <container>
-        <form>
-            <label>Search for a city:</label>
-            <input type="text" id="citySearch" class="city-search">
-            <button type="submit" id="searchBtn" class="search-btn">Search</button>
-        </form>
-        <div id="cityBtns" class="city-btns"></div>
-    </container>
-    <!-- second column on the right -->
-    <container>
-        <!-- this contains city, icon, date, temp, wind, humidity, and UV index -->
-        <div id="currentWeatherContainer" class="current-weather-container">
+    <header>Weather<span class="dashboard">Dashboard</span></header>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- first column on the left -->
+        <container class="col-sm-3">
+          <form>
+            <input
+              type="text"
+              id="citySearch"
+              class="city-search"
+              placeholder="Search for a city..."
+            />
+            <button
+              type="submit"
+              id="searchBtn"
+              class="search-btn btn btn-secondary btn-block"
+            >
+              Search
+            </button>
+          </form>
+
+          <div id="cityBtns" class="city-btns"></div>
+        </container>
+        <!-- second column on the right -->
+        <container class="col-sm-9">
+          <!-- this contains city, icon, date, temp, wind, humidity, and UV index -->
+          <div id="currentWeatherContainer" class="current-weather-container">
             <h1>Current Weather</h1>
             <h2 id="cityName" class="city-name"></h2>
             <h4 id="date" class="date"></h4>
-            <img id="icon" class="icon">
+            <img id="icon" class="icon" />
             <h4 id="temp" class="temp"></h4>
             <h4 id="wind" class="wind"></h4>
             <h4 id="humidity" class="humidity"></h4>
-            <h4 id="uvIndex" class="uv-index"></h4>
-        </div>
-        <div id="forecastContainer" class="forecast-container"></div>
-    </container>
+            <div class="index-bar">
+              <h4 id="uvIndex" class="uv-index"></h4>
+            </div>
+          </div>
+          <div
+            id="forecastContainer"
+            class="forecast-container card-group"
+          ></div>
+        </container>
+      </div>
+    </div>
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
